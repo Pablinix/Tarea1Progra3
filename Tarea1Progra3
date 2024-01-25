@@ -1,0 +1,61 @@
+#programa 1
+
+def celsius_a_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+temperatura_celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+
+temperatura_fahrenheit = celsius_a_fahrenheit(temperatura_celsius)
+
+print(f"{temperatura_celsius} grados Celsius son igual a {temperatura_fahrenheit} grados Fahrenheit.")
+
+
+#programa 2
+def dolares_a_quetzales(dolares, tasa_cambio):
+    quetzales = dolares * tasa_cambio
+    return quetzales
+
+cantidad_dolares = float(input("Ingrese la cantidad de dinero en dólares: "))
+
+tasa_cambio = 7.5 
+
+cantidad_quetzales = dolares_a_quetzales(cantidad_dolares, tasa_cambio)
+
+print(f"${cantidad_dolares} dólares son Q{cantidad_quetzales} quetzales.")
+
+#programa 3
+import cmath
+
+def hagamos_una_ecuacion_cuadratica(a, b, c):
+
+    discriminante = cmath.sqrt(b**2 - 4*a*c)
+
+
+    solucion1 = (-b + discriminante) / (2*a)
+    solucion2 = (-b - discriminante) / (2*a)
+
+    return solucion1, solucion2
+
+a = float(input("Ingrese el coeficiente a: "))
+b = float(input("Ingrese el coeficiente b: "))
+c = float(input("Ingrese el coeficiente c: "))
+
+solucion1, solucion2 = hagamos_una_ecuacion_cuadratica(a, b, c)
+
+print(f"Las soluciones x1 y x2 de la ecuación cuadrática son:")
+print(f"Solución x1: {solucion1}")
+print(f"Solución x2: {solucion2}")
+
+#programa 4
+def calcular_segundos_desde_primera_hora_del_dia(horas, minutos, segundos):
+    segundos_totales = horas * 3600 + minutos * 60 + segundos
+    return segundos_totales
+
+horas = int(input("ingrese las horas (0-23): "))
+minutos = int(input("Ingrese los minutos (0-59): "))
+segundos = int(input("Ingrese los segundos (0-59): "))
+
+segundos_totales = calcular_segundos_desde_primera_hora_del_dia(horas, minutos, segundos)
+
+print(f"desde la primera hora del dia han transcurrido {segundos_totales}")
